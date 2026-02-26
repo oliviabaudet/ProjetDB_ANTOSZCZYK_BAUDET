@@ -2,8 +2,33 @@
 
 ## Etape 1 : Analyser les besoins
 
-Nous avons choisi le domaine des plateformes d'écoute musicale en ligne telles que Spotify ou encore Deezer.  
-Voici ce que donne l'IAG comme informations sur les règles métier de votre domaine, et les données à stocker:  
+Nous avons choisi le domaine des plateformes d'écoute musicale en ligne telles que Spotify ou encore Deezer.
+
+### Prompt utilisé
+
+Tu travailles dans le domaine de la musique numérique et du streaming musical en ligne.  
+Ton entreprise a comme activité de proposer une plateforme de streaming musical permettant l’écoute de morceaux, la création et la gestion de playlists, le suivi d’artistes et l’interaction entre utilisateurs.  
+C’est une entreprise comme Spotify ou Deezer.
+
+Les données ont été collectées à partir :
+- des informations relatives aux utilisateurs et à leurs comptes,
+- des contenus musicaux (artistes, albums, morceaux, genres),
+- des playlists et de leur gestion,
+- des abonnements proposés par la plateforme,
+- des interactions des utilisateurs avec les contenus (écoutes, likes, suivis).
+
+Inspire-toi des sites web officiels et de la documentation publique de Spotify et de Deezer.
+
+Ton entreprise veut appliquer MERISE pour concevoir un système d'information. Tu es chargé de la partie analyse, c’est-à-dire de collecter les besoins auprès de l’entreprise. Elle a fait appel à un étudiant en ingénierie informatique pour réaliser ce projet, tu dois lui fournir les informations nécessaires pour qu’il applique ensuite lui-même les étapes suivantes de conception et développement de la base de données.  
+
+D’abord, établis les règles de gestions des données de ton entreprise, sous la forme d'une liste à puce. Elle doit correspondre aux informations que fournit quelqu’un qui connaît le fonctionnement de l’entreprise, mais pas comment se construit un système d’information.  
+
+Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes avec les colonnes suivantes, regroupées dans un tableau : signification de la donnée, type, taille en nombre de caractères ou de chiffres. Il doit y avoir entre 25 et 35 données. Il sert à fournir des informations supplémentaires sur chaque donnée (taille et type) mais sans a priori sur comment les données vont être modélisées ensuite.  
+
+Fournis donc les règles de gestion et le dictionnaire de données.
+
+Voici ce que donne l'IAG comme informations sur les règles métier de votre domaine, et les données à stocker:
+
 ### Règles de gestion (règles métier)
 - Un utilisateur doit posséder un compte pour accéder au service.
 - Un utilisateur est identifié par une adresse e-mail unique.
