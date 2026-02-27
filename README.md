@@ -4,7 +4,7 @@
 
 Nous avons choisi le domaine des plateformes d'écoute musicale en ligne telles que Spotify ou encore Deezer.
 
-### Prompt utilisé
+### Prompt utilisé (framework RICARDO)
 
 Tu travailles dans le domaine de la musique numérique et du streaming musical en ligne.  
 Ton entreprise a comme activité de proposer une plateforme de streaming musical permettant l’écoute de morceaux, la création et la gestion de playlists, le suivi d’artistes et l’interaction entre utilisateurs.  
