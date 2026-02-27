@@ -30,7 +30,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 Voici ce que donne l'IAG comme informations sur les règles métier de votre domaine, et les données à stocker:
 
 ### Règles de gestion (règles métier)
-- Un utilisateur doit posséder un compte pour accéder au service.
+- Un utilisateur doit créer un compte pour accéder au service.
 - Un utilisateur est identifié par une adresse e-mail unique.
 - Un utilisateur peut créer une ou plusieurs playlists.
 - Une playlist appartient à un seul utilisateur créateur.
@@ -63,7 +63,7 @@ Voici ce que donne l'IAG comme informations sur les règles métier de votre dom
 
 ### Dictionnaire de données brutes
 
-(30 données – sans hypothèse de modélisation)  
+(29 données – sans hypothèse de modélisation)  
 - Signification de la donnée	Type	Taille
 - Identifiant de l’utilisateur	entier	10
 - Adresse e-mail de l’utilisateur	chaîne	150
@@ -94,5 +94,17 @@ Voici ce que donne l'IAG comme informations sur les règles métier de votre dom
 - Date de début de l’abonnement	date	10
 - Date de fin de l’abonnement	date	10
 - Date et heure d’écoute d’un morceau	date-heure	19
-- Indicateur d’un morceau aimé par un utilisateur	booléen	1
+
+### Modèle Conceptuel de Données (MCD)
+
+Le Modèle Conceptuel de Données a été réalisé à partir des règles métiers définies précédemment.
+Il respecte en effet les principes de normalisation ici la 3ème forme de normalisation (3FN). Il contient également des éléments de modélisation avancée.
+
+On a trois éléments:
+- une association récursive : un utilisateur peut suivre aucun ou plusieurs autres utilisateurs.
+- plusieurs associations n-n : interprète, associe, aime, suivre).
+- une entité faible : l'ElementPlaylist dépend de la Playlist.
+
+Voici le MCD de notre plateforme d'écoute musicale en ligne :
+
 
