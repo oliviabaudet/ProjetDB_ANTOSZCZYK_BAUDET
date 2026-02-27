@@ -103,8 +103,8 @@ Il respecte en effet les principes de normalisation ici la 3ème forme de normal
 
 On a trois éléments :
 - une association récursive : un utilisateur peut suivre aucun ou plusieurs autres utilisateurs.
-- plusieurs associations n-n : interprète, associe, aime, suivre).
-- une entité faible : l'ElementPlaylist dépend de la Playlist.
+- plusieurs associations n-n : interprète, associe, aime, suivre...
+- une entité faible : l'ElementPlaylist du MCD dépend de la Playlist.
 
 
 Voici le MCD de notre plateforme d'écoute musicale en ligne :
