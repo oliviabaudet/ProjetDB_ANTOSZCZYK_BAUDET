@@ -4,7 +4,7 @@
 
 Nous avons choisi le domaine des plateformes d'écoute musicale en ligne telles que Spotify ou encore Deezer.
 
-### Prompt utilisé
+### Prompt utilisé (framework RICARDO)
 
 Tu travailles dans le domaine de la musique numérique et du streaming musical en ligne.  
 Ton entreprise a comme activité de proposer une plateforme de streaming musical permettant l’écoute de morceaux, la création et la gestion de playlists, le suivi d’artistes et l’interaction entre utilisateurs.  
@@ -30,7 +30,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 Voici ce que donne l'IAG comme informations sur les règles métier de votre domaine, et les données à stocker:
 
 ### Règles de gestion (règles métier)
-- Un utilisateur doit posséder un compte pour accéder au service.
+- Un utilisateur doit créer un compte pour accéder au service.
 - Un utilisateur est identifié par une adresse e-mail unique.
 - Un utilisateur peut créer une ou plusieurs playlists.
 - Une playlist appartient à un seul utilisateur créateur.
@@ -63,7 +63,7 @@ Voici ce que donne l'IAG comme informations sur les règles métier de votre dom
 
 ### Dictionnaire de données brutes
 
-(30 données – sans hypothèse de modélisation)  
+(29 données – sans hypothèse de modélisation)  
 - Signification de la donnée	Type	Taille
 - Identifiant de l’utilisateur	entier	10
 - Adresse e-mail de l’utilisateur	chaîne	150
@@ -94,5 +94,50 @@ Voici ce que donne l'IAG comme informations sur les règles métier de votre dom
 - Date de début de l’abonnement	date	10
 - Date de fin de l’abonnement	date	10
 - Date et heure d’écoute d’un morceau	date-heure	19
-- Indicateur d’un morceau aimé par un utilisateur	booléen	1
+
+
+### Modèle Conceptuel de Données (MCD)
+
+Le Modèle Conceptuel de Données a été réalisé à partir des règles métiers définies précédemment.
+Il respecte en effet les principes de normalisation ici la 3ème forme de normalisation (3FN). Il contient également des éléments de modélisation avancée.
+
+On a trois éléments :
+- une association récursive : un utilisateur peut suivre aucun ou plusieurs autres utilisateurs.
+- plusieurs associations n-n : interprète, associe, aime, suivre...
+- une entité faible : l'ElementPlaylist du MCD dépend de la Playlist.
+
+## Etape 2 : MCD
+
+Voici le MCD de notre plateforme d'écoute musicale en ligne :
+
+![MCD](MCD.png)
+
+## Etape 3 : MLD et MPD
+
+Voici le MLD de notre plateforme d'écoute musicale en ligne :
+
+Artiste = (ar_ID INT, ar_nom VARCHAR(100), ar_paysOrigine VARCHAR(50), ar_dateCréation DATE);  
+Album = (al_ID INT, al_titre VARCHAR(150), al_dateSortie DATE, #ar_ID);  
+Genre_musical = (gm_ID INT, gm_libellé VARCHAR(50));  
+Compte = (c_ID VARCHAR(50), c_statut VARCHAR(20), c_dateCréation DATE);  
+Utilisateur = (u_adresseMail VARCHAR(150), u_identifiant INT, u_pseudo VARCHAR(50), u_MDP VARCHAR(255), #c_ID);  
+Playlist = (p_ID INT, p_titre VARCHAR(100), p_statut VARCHAR(50), pl_dateCréation DATE, #u_adresseMail);  
+Abonnement = (ab_ID INT, ab_offre VARCHAR(30), ab_dateDébut DATE, ab_dateFin DATE, #u_adresseMail);  
+Morceaux = (m_ID INT, m_titre VARCHAR(150), m_durée INT, #al_ID);  
+ElementPlaylist = (#p_ID, #m_ID, position_ INT);  
+appartient = (#u_adresseMail, #p_ID, collaborateurs DECIMAL(15,2));  
+suivre = (#u_adresseMail, #ar_ID);  
+interprète = (#m_ID, #ar_ID);  
+écoute = (#u_adresseMail, #m_ID, historique VARCHAR(50), dateHeure DATETIME);  
+associe = (#m_ID, #gm_ID);  
+aime = (#u_adresseMail, #m_ID);  
+suit = (#u_adresseMail_Suivi, #u_adresseMail_Suiveur);  
+
+
+
+
+
+
+
+
 
