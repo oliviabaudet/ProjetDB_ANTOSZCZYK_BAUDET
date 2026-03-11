@@ -106,7 +106,38 @@ On a trois éléments :
 - plusieurs associations n-n : interprète, associe, aime, suivre...
 - une entité faible : l'ElementPlaylist du MCD dépend de la Playlist.
 
+## Etape 2 : MCD
 
 Voici le MCD de notre plateforme d'écoute musicale en ligne :
 
 ![MCD](MCD.png)
+
+## Etape 3 : MLD et MPD
+
+Voici le MLD de notre plateforme d'écoute musicale en ligne :
+
+Artiste = (ar_ID INT, ar_nom VARCHAR(100), ar_paysOrigine VARCHAR(50), ar_dateCréation DATE);  
+Album = (al_ID INT, al_titre VARCHAR(150), al_dateSortie DATE, #ar_ID);  
+Genre_musical = (gm_ID INT, gm_libellé VARCHAR(50));  
+Compte = (c_ID VARCHAR(50), c_statut VARCHAR(20), c_dateCréation DATE);  
+Utilisateur = (u_adresseMail VARCHAR(150), u_identifiant INT, u_pseudo VARCHAR(50), u_MDP VARCHAR(255), #c_ID);  
+Playlist = (p_ID INT, p_titre VARCHAR(100), p_statut VARCHAR(50), pl_dateCréation DATE, #u_adresseMail);  
+Abonnement = (ab_ID INT, ab_offre VARCHAR(30), ab_dateDébut DATE, ab_dateFin DATE, #u_adresseMail);  
+Morceaux = (m_ID INT, m_titre VARCHAR(150), m_durée INT, #al_ID);  
+ElementPlaylist = (#p_ID, #m_ID, position_ INT);  
+appartient = (#u_adresseMail, #p_ID, collaborateurs DECIMAL(15,2));  
+suivre = (#u_adresseMail, #ar_ID);  
+interprète = (#m_ID, #ar_ID);  
+écoute = (#u_adresseMail, #m_ID, historique VARCHAR(50), dateHeure DATETIME);  
+associe = (#m_ID, #gm_ID);  
+aime = (#u_adresseMail, #m_ID);  
+suit = (#u_adresseMail_Suivi, #u_adresseMail_Suiveur);  
+
+
+
+
+
+
+
+
+
