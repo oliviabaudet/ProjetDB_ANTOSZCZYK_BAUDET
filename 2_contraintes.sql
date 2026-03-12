@@ -8,10 +8,10 @@ ALTER TABLE Utilisateur
 ADD CONSTRAINT pseudo_non_vide
 CHECK (u_pseudo <> '');
 
--- Vérifie que le mot de passe contient au moins 8 caractères
+-- Vérifie que le mot de passe n'est pas vide
 ALTER TABLE Utilisateur
-ADD CONSTRAINT mdp_longueur
-CHECK (CHAR_LENGTH(u_MDP) >= 8);
+ADD CONSTRAINT mdp_non_vide
+CHECK (u_MDP <> '');
 
 
 -- Vérifie que le statut d'un compte fait partie des valeurs autorisées
@@ -60,10 +60,10 @@ ADD CONSTRAINT genre_non_vide
 CHECK (gm_libellé <> '');
 
 
--- Vérifie que la date de fin d'un abonnement est après ou égale à la date de début
+-- Vérifie que la date de fin d'un abonnement est après la date de début
 ALTER TABLE Abonnement
 ADD CONSTRAINT date_abonnement_valide
-CHECK (ab_dateFin IS NULL OR ab_dateFin >= ab_dateDébut);
+CHECK (ab_dateFin >= ab_dateDébut);
 
 -- Vérifie que le type d'abonnement correspond aux offres disponibles
 ALTER TABLE Abonnement
