@@ -134,7 +134,73 @@ aime = (#u_adresseMail, #m_ID);
 suit = (#u_adresseMail_Suivi, #u_adresseMail_Suiveur);  
 
 
+## Etape 4 : Insertion des données
 
+Prompt : 
+
+Donne les requêtes d’insertion permettant de remplir la base de données d’une
+plateforme de streaming musical dont le modèle relationnel est le suivant :
+
+Artiste (ar_ID, ar_nom, ar_paysOrigine, ar_dateCréation) PK = ar_ID
+Album (al_ID, al_titre, al_dateSortie, #ar_ID) PK = al_ID
+Genre_musical (gm_ID, gm_libellé) PK = gm_ID
+Compte (c_ID, c_statut, c_dateCréation) PK = c_ID
+Utilisateur (u_adresseMail, u_identifiant, u_pseudo, u_MDP, #c_ID) PK = u_adresseMail
+Playlist (p_ID, p_titre, p_statut, pl_dateCréation, #u_adresseMail) PK = p_ID
+Abonnement (ab_ID, ab_offre, ab_dateDébut, ab_dateFin, #u_adresseMail) PK = ab_ID
+Morceaux (m_ID, m_titre, m_durée, #al_ID) PK = m_ID
+ElementPlaylist (#p_ID, #m_ID, position_) PK = (p_ID, m_ID)
+appartient (#u_adresseMail, #p_ID, collaborateurs) PK = (u_adresseMail, p_ID)
+suivre (#u_adresseMail, #ar_ID) PK = (u_adresseMail, ar_ID)
+interprète (#m_ID, #ar_ID) PK = (m_ID, ar_ID)
+écoute (#u_adresseMail, #m_ID, historique, dateHeure) PK = (u_adresseMail, m_ID, dateHeure)
+associe (#m_ID, #gm_ID) PK = (m_ID, gm_ID)
+aime (#u_adresseMail, #m_ID) PK = (u_adresseMail, m_ID)
+suit (#u_adresseMail_Suivi, #u_adresseMail_Suiveur) PK = (u_adresseMail_Suivi, u_adresseMail_Suiveur)
+
+Les clés primaires correspondent aux id, sauf si autre chose est précisé.
+Les clés étrangères sont identifiées par # et doivent correspondre à des clés primaires existantes.
+
+Nombre de lignes souhaité :
+
+- 15 artistes
+- 20 albums
+- 10 genres musicaux
+- 20 comptes
+- 20 utilisateurs
+- 25 playlists
+- 20 abonnements
+- 50 morceaux
+- 60 éléments de playlist
+- 30 relations suivre artiste
+- 60 écoutes
+- 30 likes
+- 20 relations suit utilisateur
+
+Dans la table artiste, inclure obligatoirement les artistes suivants :
+The Weeknd, Selena Gomez, Bruno Mars, Charles Aznavour, Brent Faiyaz.
+
+Dans la table album, inclure obligatoirement les albums suivants :
+After Hours, Unorthodox Jukebox, Alfredo 2
+
+Dans la table genres musicaux, inclure obligatoirement les genres musicaux suivants :
+jazz, pop, reggae
+
+Dans la table morceaux, inclure obligatoirement les morceaux suivants :
+Escape From LA, When I Was Your Man, La Bohème, ROLE MODEL, Ensalada, E85
+
+Contraintes à respecter :
+
+- durée des morceaux > 0 et ≤ 1200
+- statut compte ∈ ('actif','suspendu','supprime')
+- statut playlist ∈ ('publique','privee','collaborative')
+- abonnement ∈ ('gratuit','premium','famille','etudiant')
+- historique écoute ∈ ('lecture','pause','skip')
+
+
+Les clés étrangères doivent faire référence aux clés primaires existantes : donne les lignes en commençant par remplir les tables sans clés étrangères, puis les autres tables dans lesquelles les clés étrangères font référence à des clés primaires des tables déjà remplies.
+
+Fournis l’ensemble sous la forme d’un script SQL prêt à être exécuté.
 
 
 
