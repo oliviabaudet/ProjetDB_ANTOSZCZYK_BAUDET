@@ -181,13 +181,13 @@ Dans la table artiste, inclure obligatoirement les artistes suivants :
 The Weeknd, Selena Gomez, Bruno Mars, Charles Aznavour, Brent Faiyaz.
 
 Dans la table album, inclure obligatoirement les albums suivants :
-After Hours, Unorthodox Jukebox, Alfredo 2
+After Hours, Unorthodox Jukebox, Alfredo 2.
 
 Dans la table genres musicaux, inclure obligatoirement les genres musicaux suivants :
-jazz, pop, reggae
+jazz, pop, reggae.
 
 Dans la table morceaux, inclure obligatoirement les morceaux suivants :
-Escape From LA, When I Was Your Man, La Bohème, ROLE MODEL, Ensalada, E85
+Escape From LA, When I Was Your Man, La Bohème, ROLE MODEL, Ensalada, E85.
 
 Contraintes à respecter :
 
