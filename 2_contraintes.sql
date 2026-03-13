@@ -8,10 +8,10 @@ ALTER TABLE Utilisateur
 ADD CONSTRAINT pseudo_non_vide
 CHECK (u_pseudo <> '');
 
--- Vérifie que le mot de passe contient au moins 8 caractères
+-- Empêche qu'un mot de passe soit vide
 ALTER TABLE Utilisateur
 ADD CONSTRAINT mdp_longueur
-CHECK (CHAR_LENGTH(u_MDP) >= 8);
+CHECK (u_MDP <> '');
 
 
 -- Vérifie que le statut d'un compte fait partie des valeurs autorisées

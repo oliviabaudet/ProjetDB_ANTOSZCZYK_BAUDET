@@ -50,7 +50,7 @@ CREATE TABLE Playlist(
    pl_dateCréation DATE,
    u_adresseMail VARCHAR(150) NOT NULL,
    PRIMARY KEY(p_ID),
-   UNIQUE(p_titre),
+   UNIQUE(p_titre, u_adresseMail),
    FOREIGN KEY(u_adresseMail) REFERENCES Utilisateur(u_adresseMail)
       ON DELETE CASCADE
       ON UPDATE CASCADE
@@ -95,7 +95,7 @@ CREATE TABLE ElementPlaylist(
 CREATE TABLE appartient(
    u_adresseMail VARCHAR(150),
    p_ID INT,
-   collaborateurs DECIMAL(15,2),
+   collaborateurs BOOLEAN,
    PRIMARY KEY(u_adresseMail, p_ID),
    FOREIGN KEY(u_adresseMail) REFERENCES Utilisateur(u_adresseMail)
       ON DELETE CASCADE
