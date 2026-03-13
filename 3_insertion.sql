@@ -57,24 +57,24 @@ INSERT INTO Compte (c_ID, c_statut, c_dateCréation) VALUES
 -- Utilisateur (20 lignes)
 INSERT INTO Utilisateur (u_adresseMail, u_identifiant, u_pseudo, u_MDP, c_ID) VALUES
 ('alice@example.com',1,'Alice','Password123','c1'),
-('bob@example.com',2,'Bob','Secret456','c2'),
-('carol@example.com',3,'Carol','Mdp7890','c3'),
+('bob@gmail.com',2,'Bob','Secret456','c2'),
+('carol@gmail.com',3,'Carol','Mdp7890','c3'),
 ('dave@example.com',4,'Dave','PassWord1','c4'),
 ('eve@example.com',5,'Eve','Secure123','c5'),
 ('frank@example.com',6,'Frank','FrankPwd1','c6'),
 ('grace@example.com',7,'Grace','Grace123','c7'),
 ('heidi@example.com',8,'Heidi','HeidiPwd1','c8'),
 ('ivan@example.com',9,'Ivan','IvanPass1','c9'),
-('judy@example.com',10,'Judy','JudyPwd123','c10'),
+('judy@gmail.com',10,'Judy','JudyPwd123','c10'),
 ('mallory@example.com',11,'Mallory','Mallory12','c11'),
 ('oscar@example.com',12,'Oscar','OscarPass','c12'),
 ('peggy@example.com',13,'Peggy','Peggy1234','c13'),
 ('trent@example.com',14,'Trent','TrentPwd1','c14'),
-('victor@example.com',15,'Victor','VictorPwd1','c15'),
+('victor@gmail.com',15,'Victor','VictorPwd1','c15'),
 ('walter@example.com',16,'Walter','WalterPwd1','c16'),
 ('xavier@example.com',17,'Xavier','Xavier123','c17'),
 ('yvonne@example.com',18,'Yvonne','YvonnePwd1','c18'),
-('zara@example.com',19,'Zara','ZaraPass1','c19'),
+('zara@gmail.com',19,'Zara','ZaraPass1','c19'),
 ('quentin@example.com',20,'Quentin','Quentin12','c20');
 
 -- Album (20 lignes)
@@ -156,28 +156,28 @@ INSERT INTO Morceaux (m_ID, m_titre, m_durée, al_ID) VALUES
 -- Playlist (25 lignes)
 INSERT INTO Playlist (p_ID, p_titre, p_statut, pl_dateCréation, u_adresseMail) VALUES
 (1,'Top Hits','publique','2023-01-10','alice@example.com'),
-(2,'Chill Vibes','collaborative','2023-02-12','bob@example.com'),
-(3,'Workout','publique','2023-03-05','carol@example.com'),
+(2,'Chill Vibes','collaborative','2023-02-12','bob@gmail.com'),
+(3,'Workout','publique','2023-03-05','carol@gmail.com'),
 (4,'Party Time','publique','2023-01-15','dave@example.com'),
 (5,'Relax','privee','2023-02-18','eve@example.com'),
 (6,'Focus','publique','2023-03-20','frank@example.com'),
 (7,'Romantic','collaborative','2023-01-25','grace@example.com'),
 (8,'Hip Hop Mix','publique','2023-02-28','heidi@example.com'),
 (9,'Pop Classics','privee','2023-03-10','ivan@example.com'),
-(10,'Rock Hits','publique','2023-01-12','judy@example.com'),
+(10,'Rock Hits','publique','2023-01-12','judy@gmail.com'),
 (11,'Jazz Lounge','privee','2023-02-20','mallory@example.com'),
 (12,'Evening Chill','publique','2023-03-15','oscar@example.com'),
 (13,'Summer Vibes','publique','2023-01-18','peggy@example.com'),
 (14,'Winter Playlist','privee','2023-02-05','trent@example.com'),
-(15,'Morning Boost','publique','2023-03-08','victor@example.com'),
+(15,'Morning Boost','publique','2023-03-08','victor@gmail.com'),
 (16,'Night Drive','publique','2023-01-22','walter@example.com'),
 (17,'Acoustic','privee','2023-02-12','xavier@example.com'),
 (18,'Study Time','publique','2023-03-19','yvonne@example.com'),
-(19,'Love Songs','collaborative','2023-01-30','zara@example.com'),
+(19,'Love Songs','collaborative','2023-01-30','zara@gmail.com'),
 (20,'Throwback','publique','2023-02-25','quentin@example.com'),
 (21,'Indie Mix','privee','2023-03-02','alice@example.com'),
-(22,'R&B Essentials','publique','2023-01-28','bob@example.com'),
-(23,'Electronic','publique','2023-02-08','carol@example.com'),
+(22,'R&B Essentials','publique','2023-01-28','bob@gmail.com'),
+(23,'Electronic','publique','2023-02-08','carol@gmail.com'),
 (24,'Latin Hits','publique','2023-03-05','dave@example.com'),
 (25,'Reggae Vibes','publique','2023-02-15','eve@example.com');
 
@@ -206,50 +206,50 @@ INSERT INTO ElementPlaylist (p_ID, m_ID, position_) VALUES
 -- Abonnement (20 lignes)
 INSERT INTO Abonnement (ab_ID, ab_offre, ab_dateDébut, ab_dateFin, u_adresseMail) VALUES
 (1,'gratuit','2023-01-01','2023-12-31','alice@example.com'),
-(2,'premium','2023-01-15','2023-12-31','bob@example.com'),
-(3,'famille','2023-02-01','2023-12-31','carol@example.com'),
+(2,'premium','2023-01-15','2023-12-31','bob@gmail.com'),
+(3,'famille','2023-02-01','2023-12-31','carol@gmail.com'),
 (4,'etudiant','2023-02-15','2023-12-31','dave@example.com'),
 (5,'premium','2023-01-10','2023-12-31','eve@example.com'),
 (6,'gratuit','2023-01-20','2023-12-31','frank@example.com'),
 (7,'etudiant','2023-02-05','2023-12-31','grace@example.com'),
 (8,'famille','2023-01-18','2023-12-31','heidi@example.com'),
 (9,'premium','2023-02-12','2023-12-31','ivan@example.com'),
-(10,'gratuit','2023-01-25','2023-12-31','judy@example.com'),
+(10,'gratuit','2023-01-25','2023-12-31','judy@gmail.com'),
 (11,'premium','2023-02-01','2023-12-31','mallory@example.com'),
 (12,'etudiant','2023-02-10','2023-12-31','oscar@example.com'),
 (13,'famille','2023-01-12','2023-12-31','peggy@example.com'),
 (14,'premium','2023-01-20','2023-12-31','trent@example.com'),
-(15,'gratuit','2023-02-05','2023-12-31','victor@example.com'),
+(15,'gratuit','2023-02-05','2023-12-31','victor@gmail.com'),
 (16,'premium','2023-01-18','2023-12-31','walter@example.com'),
 (17,'etudiant','2023-01-28','2023-12-31','xavier@example.com'),
 (18,'famille','2023-01-10','2023-12-31','yvonne@example.com'),
-(19,'premium','2023-02-12','2023-12-31','zara@example.com'),
+(19,'premium','2023-02-12','2023-12-31','zara@gmail.com'),
 (20,'gratuit','2023-01-15','2023-12-31','quentin@example.com');
 
 -- Suivre (30 lignes)
 INSERT INTO suivre (u_adresseMail, ar_ID) VALUES
-('alice@example.com',1),('alice@example.com',2),('bob@example.com',3),
-('bob@example.com',4),('carol@example.com',5),('carol@example.com',6),
+('alice@example.com',1),('alice@example.com',2),('bob@gmail.com',3),
+('bob@gmail.com',4),('carol@gmail.com',5),('carol@gmail.com',6),
 ('dave@example.com',7),('dave@example.com',8),('eve@example.com',9),
 ('eve@example.com',10),('frank@example.com',11),('frank@example.com',12),
 ('grace@example.com',13),('grace@example.com',14),('heidi@example.com',15),
 ('heidi@example.com',1),('ivan@example.com',2),('ivan@example.com',3),
-('judy@example.com',4),('judy@example.com',5),('mallory@example.com',6),
+('judy@gmail.com',4),('judy@gmail.com',5),('mallory@example.com',6),
 ('mallory@example.com',7),('oscar@example.com',8),('oscar@example.com',9),
 ('peggy@example.com',10),('peggy@example.com',11),('trent@example.com',12),
-('trent@example.com',13),('victor@example.com',14),('victor@example.com',15);
+('trent@example.com',13),('victor@gmail.com',14),('victor@gmail.com',15);
 
 -- Écoute (60 lignes)
 INSERT INTO écoute (u_adresseMail, m_ID, historique, dateHeure) VALUES
 ('alice@example.com',1,'lecture','2023-03-01 10:00:00'),
 ('alice@example.com',2,'pause','2023-03-01 10:03:30'),
 ('alice@example.com',7,'lecture','2023-03-01 10:08:00'),
-('bob@example.com',3,'skip','2023-03-02 14:10:00'),
-('bob@example.com',4,'lecture','2023-03-02 14:13:00'),
-('bob@example.com',9,'pause','2023-03-02 14:18:00'),
-('carol@example.com',5,'lecture','2023-03-03 09:00:00'),
-('carol@example.com',6,'pause','2023-03-03 09:03:00'),
-('carol@example.com',11,'lecture','2023-03-03 09:08:00'),
+('bob@gmail.com',3,'skip','2023-03-02 14:10:00'),
+('bob@gmail.com',4,'lecture','2023-03-02 14:13:00'),
+('bob@gmail.com',9,'pause','2023-03-02 14:18:00'),
+('carol@gmail.com',5,'lecture','2023-03-03 09:00:00'),
+('carol@gmail.com',6,'pause','2023-03-03 09:03:00'),
+('carol@gmail.com',11,'lecture','2023-03-03 09:08:00'),
 ('dave@example.com',8,'lecture','2023-03-04 11:15:00'),
 ('dave@example.com',10,'skip','2023-03-04 11:20:00'),
 ('dave@example.com',13,'lecture','2023-03-04 11:25:00'),
@@ -268,9 +268,9 @@ INSERT INTO écoute (u_adresseMail, m_ID, historique, dateHeure) VALUES
 ('ivan@example.com',26,'pause','2023-03-09 17:30:00'),
 ('ivan@example.com',27,'lecture','2023-03-09 17:35:00'),
 ('ivan@example.com',28,'skip','2023-03-09 17:40:00'),
-('judy@example.com',29,'lecture','2023-03-10 18:45:00'),
-('judy@example.com',30,'pause','2023-03-10 18:50:00'),
-('judy@example.com',31,'lecture','2023-03-10 18:55:00'),
+('judy@gmail.com',29,'lecture','2023-03-10 18:45:00'),
+('judy@gmail.com',30,'pause','2023-03-10 18:50:00'),
+('judy@gmail.com',31,'lecture','2023-03-10 18:55:00'),
 ('mallory@example.com',32,'skip','2023-03-11 19:05:00'),
 ('mallory@example.com',33,'lecture','2023-03-11 19:10:00'),
 ('mallory@example.com',34,'pause','2023-03-11 19:15:00'),
@@ -283,9 +283,9 @@ INSERT INTO écoute (u_adresseMail, m_ID, historique, dateHeure) VALUES
 ('trent@example.com',41,'lecture','2023-03-14 22:05:00'),
 ('trent@example.com',42,'pause','2023-03-14 22:10:00'),
 ('trent@example.com',43,'lecture','2023-03-14 22:15:00'),
-('victor@example.com',44,'skip','2023-03-15 23:20:00'),
-('victor@example.com',45,'lecture','2023-03-15 23:25:00'),
-('victor@example.com',46,'pause','2023-03-15 23:30:00'),
+('victor@gmail.com',44,'skip','2023-03-15 23:20:00'),
+('victor@gmail.com',45,'lecture','2023-03-15 23:25:00'),
+('victor@gmail.com',46,'pause','2023-03-15 23:30:00'),
 ('walter@example.com',47,'lecture','2023-03-16 09:05:00'),
 ('walter@example.com',48,'skip','2023-03-16 09:10:00'),
 ('walter@example.com',49,'lecture','2023-03-16 09:15:00'),
@@ -295,39 +295,38 @@ INSERT INTO écoute (u_adresseMail, m_ID, historique, dateHeure) VALUES
 ('yvonne@example.com',3,'lecture','2023-03-18 11:35:00'),
 ('yvonne@example.com',4,'pause','2023-03-18 11:40:00'),
 ('yvonne@example.com',5,'lecture','2023-03-18 11:45:00'),
-('zara@example.com',6,'skip','2023-03-19 12:50:00'),
-('zara@example.com',7,'lecture','2023-03-19 12:55:00'),
-('zara@example.com',8,'pause','2023-03-19 13:00:00'),
+('zara@gmail.com',6,'skip','2023-03-19 12:50:00'),
+('zara@gmail.com',7,'lecture','2023-03-19 12:55:00'),
+('zara@gmail.com',8,'pause','2023-03-19 13:00:00'),
 ('quentin@example.com',9,'lecture','2023-03-20 14:10:00'),
 ('quentin@example.com',10,'skip','2023-03-20 14:15:00'),
 ('quentin@example.com',11,'lecture','2023-03-20 14:20:00');
 
 -- Aime (30 lignes)
 INSERT INTO aime (u_adresseMail, m_ID) VALUES
-('alice@example.com',1),('alice@example.com',2),('bob@example.com',3),
-('bob@example.com',4),('carol@example.com',5),('carol@example.com',6),
+('alice@example.com',1),('alice@example.com',2),('bob@gmail.com',3),
+('bob@gmail.com',4),('carol@gmail.com',5),('carol@gmail.com',6),
 ('dave@example.com',7),('dave@example.com',8),('eve@example.com',9),
 ('eve@example.com',10),('frank@example.com',11),('frank@example.com',12),
 ('grace@example.com',13),('grace@example.com',14),('heidi@example.com',15),
 ('heidi@example.com',1),('ivan@example.com',2),('ivan@example.com',3),
-('judy@example.com',4),('judy@example.com',5),('mallory@example.com',6),
+('judy@gmail.com',4),('judy@gmail.com',5),('mallory@example.com',6),
 ('mallory@example.com',7),('oscar@example.com',8),('oscar@example.com',9),
 ('peggy@example.com',10),('peggy@example.com',11),('trent@example.com',12),
-('trent@example.com',13),('victor@example.com',14),('victor@example.com',15);
+('trent@example.com',13),('victor@gmail.com',14),('victor@gmail.com',15);
 
 -- Suit (20 lignes)
 INSERT INTO suit (u_adresseMail_Suivi, u_adresseMail_Suiveur) VALUES
-('alice@example.com','bob@example.com'),('carol@example.com','dave@example.com'),
+('alice@example.com','bob@gmail.com'),('carol@gmail.com','dave@example.com'),
 ('eve@example.com','frank@example.com'),('grace@example.com','heidi@example.com'),
-('ivan@example.com','judy@example.com'),('mallory@example.com','oscar@example.com'),
-('peggy@example.com','trent@example.com'),('victor@example.com','walter@example.com'),
-('xavier@example.com','yvonne@example.com'),('zara@example.com','quentin@example.com'),
-('alice@example.com','carol@example.com'),('bob@example.com','eve@example.com'),
+('ivan@example.com','judy@gmail.com'),('mallory@example.com','oscar@example.com'),
+('peggy@example.com','trent@example.com'),('victor@gmail.com','walter@example.com'),
+('xavier@example.com','yvonne@example.com'),('zara@gmail.com','quentin@example.com'),
+('alice@example.com','carol@gmail.com'),('bob@gmail.com','eve@example.com'),
 ('dave@example.com','grace@example.com'),('heidi@example.com','ivan@example.com'),
 ('judy@example.com','mallory@example.com'),('oscar@example.com','peggy@example.com'),
-('trent@example.com','victor@example.com'),('walter@example.com','xavier@example.com'),
-('yvonne@example.com','zara@example.com'),('quentin@example.com','alice@example.com');
-<<<<<<< HEAD
+('trent@example.com','victor@gmail.com'),('walter@example.com','xavier@example.com'),
+('yvonne@example.com','zara@gmail.com'),('quentin@example.com','alice@example.com');
 
 -- =====================================================
 -- TESTS DES CONTRAINTES (CES REQUETES DOIVENT ECHOUER)
@@ -379,5 +378,3 @@ VALUES (1, 1, -5);
 
 INSERT INTO Abonnement (ab_ID, ab_offre, ab_dateDébut, ab_dateFin, u_adresseMail)
 VALUES (201, 'premium', '2024-01-01', '2023-01-01', 'alice@example.com');
-=======
->>>>>>> 2747c690e60e057a57df15febf98d243911854b3
