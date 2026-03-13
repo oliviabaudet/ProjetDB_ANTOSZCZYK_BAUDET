@@ -327,6 +327,7 @@ INSERT INTO suit (u_adresseMail_Suivi, u_adresseMail_Suiveur) VALUES
 ('judy@example.com','mallory@example.com'),('oscar@example.com','peggy@example.com'),
 ('trent@example.com','victor@example.com'),('walter@example.com','xavier@example.com'),
 ('yvonne@example.com','zara@example.com'),('quentin@example.com','alice@example.com');
+<<<<<<< HEAD
 
 -- =====================================================
 -- TESTS DES CONTRAINTES (CES REQUETES DOIVENT ECHOUER)
@@ -378,3 +379,5 @@ VALUES (1, 1, -5);
 
 INSERT INTO Abonnement (ab_ID, ab_offre, ab_dateDébut, ab_dateFin, u_adresseMail)
 VALUES (201, 'premium', '2024-01-01', '2023-01-01', 'alice@example.com');
+=======
+>>>>>>> 2747c690e60e057a57df15febf98d243911854b3
