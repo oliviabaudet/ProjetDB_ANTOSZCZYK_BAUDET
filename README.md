@@ -136,10 +136,9 @@ suit = (#u_adresseMail_Suivi, #u_adresseMail_Suiveur);
 
 ## Etape 4 : Insertion des données
 
-Prompt : 
+### Prompt
 
-Donne les requêtes d’insertion permettant de remplir la base de données d’une  
-plateforme de streaming musical dont le modèle relationnel est le suivant :  
+Donne les requêtes d’insertion permettant de remplir la base de données d’une plateforme de streaming musical dont le modèle relationnel est le suivant :  
 
 Artiste (ar_ID, ar_nom, ar_paysOrigine, ar_dateCréation) PK = ar_ID  
 Album (al_ID, al_titre, al_dateSortie, #ar_ID) PK = al_ID  
@@ -197,13 +196,29 @@ Contraintes à respecter :
 - abonnement ∈ ('gratuit','premium','famille','etudiant')  
 - historique écoute ∈ ('lecture','pause','skip')  
 
-
-Les clés étrangères doivent faire référence aux clés primaires existantes : donne les lignes en commençant par remplir les tables sans clés   étrangères, puis les autres tables dans lesquelles les clés étrangères font référence à des clés primaires des tables déjà remplies.  
+Les clés étrangères doivent faire référence aux clés primaires existantes : donne les lignes en commençant par remplir les tables sans clés étrangères, puis les autres tables dans lesquelles les clés étrangères font référence à des clés primaires des tables déjà remplies.  
 
 Fournis l’ensemble sous la forme d’un script SQL prêt à être exécuté.  
 
 
+À la fin du fichier d’insertion, nous avons ajouté un ensemble de requêtes permettant de tester certaines contraintes d’intégrité de la base de données. Ces requêtes sont volontairement incorrectes et doivent normalement produire des erreurs lors de leur exécution.
 
+## Etape 5: Interrogation de la base de données
+
+### Scénario d’utilisation
+
+La base de données représente une plateforme d’écoute de musique en ligne.  
+Elle peut être utilisée par l’équipe d’analyse de la plateforme afin d’étudier l’utilisation du service par les utilisateurs et mieux comprendre leurs habitudes d’écoute.  
+
+L’analyste souhaite notamment obtenir des informations sur :   
+
+- les morceaux disponibles sur la plateforme  
+- les playlists créées par les utilisateurs  
+- les artistes suivis  
+- l’activité d’écoute des utilisateurs  
+- certaines statistiques d’utilisation  
+
+Les requêtes SQL permettent donc d’extraire ces informations afin d’aider l’entreprise à analyser l’utilisation de la plateforme et améliorer ses recommandations musicales.  
 
 
 
