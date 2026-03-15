@@ -227,3 +227,7 @@ On peut également s'intéresser à une analyse des playlists. La plateforme d'�
 Le but est d'identifier les playlist contenant le plus de morceaux, les morceaux les plus présents dans les playlists ainsi que les utilisateurs qui créent le plus de playlists.
 Ces analyses permettraient de mettre en avant certaines playlists sur la page d'accueil de la plateforme. Les playlists permettraient aux utilisateurs de découvrir de nouveaux morceaux.
 
+## Lien de la vidéo :
+
+vidéo mini-projet olivia baudet et sara antoszczyk
+
