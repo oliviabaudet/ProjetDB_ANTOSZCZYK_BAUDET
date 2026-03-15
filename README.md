@@ -221,4 +221,9 @@ L’analyste souhaite notamment obtenir des informations sur :
 Les requêtes SQL permettent donc d’extraire ces informations afin d’aider l’entreprise à analyser l’utilisation de la plateforme et améliorer ses recommandations musicales.  
 
 
+### Autre scénario d’utilisation
+
+On peut également s'intéresser à une analyse des playlists. La plateforme d'écoute musicale analyse les playlists créées par les utilisateurs afin de mieux comprendre les tendances musicales. 
+Le but est d'identifier les playlist contenant le plus de morceaux, les morceaux les plus présents dans les playlists ainsi que les utilisateurs qui créent le plus de playlists.
+Ces analyses permettraient de mettre en avant certaines playlists sur la page d'accueil de la plateforme. Les playlists permettraient aux utilisateurs de découvrir de nouveaux morceaux.
 
