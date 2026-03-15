@@ -229,5 +229,5 @@ Ces analyses permettraient de mettre en avant certaines playlists sur la page d'
 
 ## Lien de la vidéo :
 
-vidéo mini-projet olivia baudet et sara antoszczyk
+[vidéo mini-projet olivia baudet et sara antoszczyk](https://drive.google.com/file/d/1j8x8FdJ6esWOyuOJMNXb40H5fwdHSzHM/view?usp=drive_link)
 
